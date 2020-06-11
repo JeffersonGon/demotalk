@@ -19,5 +19,12 @@ namespace Demo.APIs.Controllers
         {
             return sales.Values();
         }
+
+        [HttpGet]
+        [Route("")]
+        public IEnumerable<SalesModels> GetNova([FromServices] ISalesModels sales)
+        {
+            return sales.Values();
+        }
     }
 }
