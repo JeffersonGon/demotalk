@@ -19,5 +19,12 @@ namespace Demo.APIs.Controllers
         {
             return products.Values();
         }
+
+        [HttpGet]
+        [Route("")]
+        public ProductsModels GetFirst([FromServices] IProductsModels products)
+        {
+            return products.Values().FirstOrDefault();
+        }
     }
 }
